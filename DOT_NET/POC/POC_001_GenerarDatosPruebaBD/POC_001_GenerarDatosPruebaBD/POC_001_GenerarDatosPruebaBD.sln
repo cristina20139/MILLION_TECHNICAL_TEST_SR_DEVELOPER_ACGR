@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POC_001_GenerarDatosPruebaBD", "POC_001_GenerarDatosPruebaBD\POC_001_GenerarDatosPruebaBD.csproj", "{55E12C45-B895-41D5-ABFD-48813A75EF58}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{55E12C45-B895-41D5-ABFD-48813A75EF58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55E12C45-B895-41D5-ABFD-48813A75EF58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55E12C45-B895-41D5-ABFD-48813A75EF58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55E12C45-B895-41D5-ABFD-48813A75EF58}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EAB30E66-A631-410A-9295-1F45E79B16AB}
+	EndGlobalSection
+EndGlobal

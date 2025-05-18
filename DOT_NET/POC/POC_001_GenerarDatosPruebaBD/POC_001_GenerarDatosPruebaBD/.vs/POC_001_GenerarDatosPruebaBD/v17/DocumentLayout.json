@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "K:\\MILLION_TECHNICAL_TEST_SR_DEVELOPER_ACGR\\DOT_NET\\POC\\POC_001_GenerarDatosPruebaBD\\POC_001_GenerarDatosPruebaBD\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{55E12C45-B895-41D5-ABFD-48813A75EF58}|POC_001_GenerarDatosPruebaBD\\POC_001_GenerarDatosPruebaBD.csproj|k:\\million_technical_test_sr_developer_acgr\\dot_net\\poc\\poc_001_generardatospruebabd\\poc_001_generardatospruebabd\\poc_001_generardatospruebabd\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{55E12C45-B895-41D5-ABFD-48813A75EF58}|POC_001_GenerarDatosPruebaBD\\POC_001_GenerarDatosPruebaBD.csproj|solutionrelative:poc_001_generardatospruebabd\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "K:\\MILLION_TECHNICAL_TEST_SR_DEVELOPER_ACGR\\DOT_NET\\POC\\POC_001_GenerarDatosPruebaBD\\POC_001_GenerarDatosPruebaBD\\POC_001_GenerarDatosPruebaBD\\Program.cs",
+              "RelativeDocumentMoniker": "POC_001_GenerarDatosPruebaBD\\Program.cs",
+              "ToolTip": "K:\\MILLION_TECHNICAL_TEST_SR_DEVELOPER_ACGR\\DOT_NET\\POC\\POC_001_GenerarDatosPruebaBD\\POC_001_GenerarDatosPruebaBD\\POC_001_GenerarDatosPruebaBD\\Program.cs",
+              "RelativeToolTip": "POC_001_GenerarDatosPruebaBD\\Program.cs",
+              "ViewState": "AQIAALcAAAAAAAAAAAAswL4AAABbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-18T19:14:00.591Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
