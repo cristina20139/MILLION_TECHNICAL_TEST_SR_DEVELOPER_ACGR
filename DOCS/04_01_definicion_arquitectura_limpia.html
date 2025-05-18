@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Arquitectura Limpia (Clean Architecture) - Explicación y Ejemplo C# REST</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fffdfa;
+      color: #222;
+      margin: 2em auto;
+      max-width: 900px;
+      padding: 1.5em 2em;
+      border-radius: 12px;
+      box-shadow: 0 0 18px rgba(0, 0, 0, 0.08);
+      line-height: 1.6;
+    }
+    h1, h2, h3 {
+      color: #1a73e8;
+      margin-bottom: 0.3em;
+    }
+    p {
+      margin-bottom: 1em;
+    }
+    ul {
+      padding-left: 1.5em;
+      margin-bottom: 1.2em;
+    }
+    li {
+      margin-bottom: 0.5em;
+    }
+    code {
+      background: #eaeaea;
+      padding: 2px 6px;
+      border-radius: 5px;
+      font-family: Consolas, monospace;
+    }
+    pre {
+      background: #eaeaea;
+      padding: 1em;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-family: Consolas, monospace;
+      margin-bottom: 1.5em;
+    }
+    .emoji {
+      font-size: 1.3em;
+      margin-right: 0.5em;
+    }
+    footer {
+      text-align: center;
+      margin-top: 2em;
+      font-size: 0.9em;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <h1><span class="emoji">🏗️</span>Arquitectura Limpia (Clean Architecture)</h1>
+  
+  <p>
+    La <strong>Arquitectura Limpia</strong> es un patrón de diseño para organizar proyectos de software con el objetivo principal de separar las responsabilidades y mantener el código <em>limpio</em>, mantenible y fácil de testear.
+  </p>
+  
+  <h2><span class="emoji">📐</span>Definición</h2>
+  <p>
+    Fue popularizada por Robert C. Martin ("Uncle Bob") y propone una arquitectura en capas, donde las dependencias siempre apuntan hacia el <strong>centro</strong>. Esto significa que el núcleo de la aplicación es independiente de frameworks, bases de datos o detalles de UI.
+  </p>
+  
+  <h2><span class="emoji">🧱</span>Capas principales de la Arquitectura Limpia</h2>
+  <ul>
+    <li><strong><span class="emoji">⚙️</span> Entidades (Entities):</strong> Representan las reglas de negocio y modelos de dominio. Son independientes de cualquier tecnología.</li>
+    <li><strong><span class="emoji">📚</span> Casos de Uso (Use Cases):</strong> Contienen la lógica específica de la aplicación que manipula las entidades para realizar tareas concretas.</li>
+    <li><strong><span class="emoji">🔌</span> Interfaces / Adaptadores (Interface Adapters):</strong> Adaptan los datos entre las capas internas y externas. Incluye controladores, presentadores, gateways.</li>
+    <li><strong><span class="emoji">🌐</span> Frameworks y Drivers:</strong> Contienen detalles externos como bases de datos, interfaces web, UI, dispositivos externos. Es la capa más externa.</li>
+  </ul>
+  
+  <h2><span class="emoji">🔄</span> Principios Clave</h2>
+  <ul>
+    <li><strong>Dependencia hacia adentro:</strong> Las capas externas dependen de las internas, pero no al revés.</li>
+    <li><strong>Independencia de frameworks:</strong> No atar la lógica de negocio a frameworks específicos.</li>
+    <li><strong>Testabilidad:</strong> Las capas internas pueden ser testeadas sin depender de infraestructura.</li>
+    <li><strong>Separación de responsabilidades:</strong> Cada capa tiene su función y no mezcla responsabilidades.</li>
+  </ul>
+  
+  <h2><span class="emoji">⚡</span> Beneficios</h2>
+  <ul>
+    <li>Mayor mantenibilidad y escalabilidad.</li>
+    <li>Fácil integración de nuevas tecnologías sin afectar la lógica de negocio.</li>
+    <li>Facilita pruebas unitarias y de integración.</li>
+  </ul>
+
+  <h2><span class="emoji">💻</span> Ejemplo básico de implementación en C# REST (.NET 6+)</h2>
+  
+  <p>Este ejemplo simula una API REST para manejar <code>Productos</code>, organizada según Arquitectura Limpia.</p>
+  
+  <h3><span class="emoji">🏢</span> 1. Entidades (Domain Layer)</h3>
+  <pre><code>namespace CleanArchitecture.Domain.Entities
+{
+    public class Producto
+    {
+        public int Id { get; set; }
+        public string Nombre { get; set; }
+        public decimal Precio { get; set; }
+    }
+}</code></pre>
+  
+  <h3><span class="emoji">📦</span> 2. Casos de Uso (Application Layer)</h3>
+  <pre><code>using CleanArchitecture.Domain.Entities;
+using System.Collections.Generic;
+
+namespace CleanArchitecture.Application.Interfaces
+{
+    public interface IProductoService
+    {
+        IEnumerable&lt;Producto&gt; ObtenerTodos();
+        Producto ObtenerPorId(int id);
+        void Agregar(Producto producto);
+    }
+}
+
+public class ProductoService : IProductoService
+{
+    private readonly List&lt;Producto&gt; _productos = new();
+
+    public IEnumerable&lt;Producto&gt; ObtenerTodos() =&gt; _productos;
+
+    public Producto ObtenerPorId(int id) =&gt; _productos.Find(p =&gt; p.Id == id);
+
+    public void Agregar(Producto producto) =&gt; _productos.Add(producto);
+}</code></pre>
+  
+  <h3><span class="emoji">🌐</span> 3. Interfaces / Adaptadores (API Layer - Controllers)</h3>
+  <pre><code>using CleanArchitecture.Application.Interfaces;
+using CleanArchitecture.Domain.Entities;
+using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+
+namespace CleanArchitecture.API.Controllers
+{
+    [ApiController]
+    [Route("api/[controller]")]
+    public class ProductosController : ControllerBase
+    {
+        private readonly IProductoService _productoService;
+
+        public ProductosController(IProductoService productoService)
+        {
+            _productoService = productoService;
+        }
+
+        [HttpGet]
+        public IEnumerable&lt;Producto&gt; Get() =&gt; _productoService.ObtenerTodos();
+
+        [HttpGet("{id}")]
+        public ActionResult&lt;Producto&gt; Get(int id)
+        {
+            var producto = _productoService.ObtenerPorId(id);
+            if (producto == null) return NotFound();
+            return producto;
+        }
+
+        [HttpPost]
+        public IActionResult Post([FromBody] Producto producto)
+        {
+            _productoService.Agregar(producto);
+            return CreatedAtAction(nameof(Get), new { id = producto.Id }, producto);
+        }
+    }
+}</code></pre>
+  
+  <h3><span class="emoji">⚙️</span> 4. Startup / Program (Inyección de dependencias)</h3>
+  <pre><code>var builder = WebApplication.CreateBuilder(args);
+
+// Registrar servicios de aplicación
+builder.Services.AddSingleton&lt;IProductoService, ProductoService&gt;();
+
+builder.Services.AddControllers();
+
+var app = builder.Build();
+
+app.MapControllers();
+
+app.Run();</code></pre>
+  
+  <h2><span class="emoji">📌</span> Resumen rápido:</h2>
+  <ul>
+    <li>El <code>Domain</code> contiene las <strong>entidades</strong> puras sin referencias externas.</li>
+    <li>El <code>Application</code> contiene la <strong>lógica de negocio</strong> y define interfaces para los servicios.</li>
+    <li>El <code>API</code> o capa externa usa los servicios a través de interfaces para atender solicitudes HTTP.</li>
+    <li>Las dependencias van hacia adentro, el API depende de Application, y esta depende de Domain.</li>
+  </ul>
+  
+  <footer>
+    Creado con ❤️ por Aura Cristina Garzon Rodriguez | Arquitectura Limpia y C# REST .NET
+  </footer>
+</body>
+</html>

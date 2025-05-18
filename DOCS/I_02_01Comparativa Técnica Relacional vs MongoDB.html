@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Comparativa Técnica: Relacional vs. MongoDB</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    .relacional {
+      background-color: #e6ffe6;
+    }
+    .mongo {
+      background-color: #fff0f0;
+    }
+  </style>
+</head>
+<body>
+
+<h2>📊 Comparativa Técnica: Base de Datos Relacional vs. MongoDB</h2>
+
+<table>
+  <tr>
+    <th>🔍 Criterio Técnico</th>
+    <th class="relacional">✅ Relacional (SQL Server / PostgreSQL)</th>
+    <th class="mongo">⚠️ MongoDB</th>
+  </tr>
+  <tr>
+    <td>🧱 Modelo de Datos</td>
+    <td>🔗 Tablas con relaciones, integridad referencial</td>
+    <td>📄 Documentos JSON, sin relaciones estrictas</td>
+  </tr>
+  <tr>
+    <td>🧰 Soporte en .NET / C#</td>
+    <td>💯 Excelente con Entity Framework, LINQ, transacciones</td>
+    <td>🧪 Requiere librerías externas, soporte parcial</td>
+  </tr>
+  <tr>
+    <td>🔍 Consultas Complejas</td>
+    <td>🧠 SQL permite filtros, joins, ordenamientos</td>
+    <td>⚙️ Requiere agregaciones y código extenso</td>
+  </tr>
+  <tr>
+    <td>🚀 Manejo de Índices</td>
+    <td>🎯 Soporte para índices compuestos y únicos</td>
+    <td>🔍 Soporte limitado para combinaciones complejas</td>
+  </tr>
+  <tr>
+    <td>🏛️ Estabilidad y Madurez</td>
+    <td>📈 Alta, probado en producción por décadas</td>
+    <td>🧪 Menor madurez en lógica empresarial compleja</td>
+  </tr>
+  <tr>
+    <td>📈 Escalabilidad</td>
+    <td>⬆️ Vertical y horizontal con particionamiento</td>
+    <td>🌐 Horizontal por diseño, ideal para big data</td>
+  </tr>
+  <tr>
+    <td>📦 Manejo de Esquema</td>
+    <td>🧾 Estricto, validado por la base de datos</td>
+    <td>♻️ Flexible (schema-less), posible inconsistencia</td>
+  </tr>
+  <tr>
+    <td>🔐 Auditoría y Seguridad</td>
+    <td>🛡️ Logs, triggers, roles, backups transaccionales</td>
+    <td>🔧 Requiere implementación personalizada</td>
+  </tr>
+  <tr>
+    <td>💼 Transacciones ACID</td>
+    <td>✅ Completo y robusto</td>
+    <td>⚠️ Limitado, disponible desde v4.0 con restricciones</td>
+  </tr>
+  <tr>
+    <td>🧪 Testing y Mocking</td>
+    <td>🧰 Compatible con pruebas unitarias y mocking fácil</td>
+    <td>🔧 Requiere emulación, más complejo</td>
+  </tr>
+  <tr>
+    <td>🛠️ Mantenimiento</td>
+    <td>🧹 Bajo costo, herramientas estándar y soporte global</td>
+    <td>⚙️ Requiere conocimiento técnico específico</td>
+  </tr>
+  <tr>
+    <td>🧩 Filtros Dinámicos</td>
+    <td>📊 LINQ + EF permiten filtros complejos fácilmente</td>
+    <td>📉 Menos flexible en expresiones dinámicas</td>
+  </tr>
+</table>
+
+<h3>🏁 Conclusión Técnica</h3>
+
+<table>
+  <tr>
+    <th>📌 Aspecto</th>
+    <th>✅ Elección Recomendada</th>
+  </tr>
+  <tr>
+    <td>Fiabilidad y madurez</td>
+    <td>✔️ Relacional</td>
+  </tr>
+  <tr>
+    <td>Facilidad en .NET</td>
+    <td>✔️ Relacional</td>
+  </tr>
+  <tr>
+    <td>Filtros complejos</td>
+    <td>✔️ Relacional</td>
+  </tr>
+  <tr>
+    <td>Escalabilidad horizontal extrema</td>
+    <td>⚠️ MongoDB</td>
+  </tr>
+  <tr>
+    <td>Flexibilidad de datos</td>
+    <td>⚠️ MongoDB</td>
+  </tr>
+</table>
+
+</body>
+</html>

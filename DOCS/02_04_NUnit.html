@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Introducción a NUnit</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 2em;
+      color: #333;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: auto;
+      background: white;
+      padding: 2em;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    h1, h2, h3 {
+      color: #005a9e;
+    }
+
+    code {
+      background: #f4f4f4;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: Consolas, monospace;
+    }
+
+    pre {
+      background: #f4f4f4;
+      padding: 1em;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+
+    ul {
+      padding-left: 1.5em;
+    }
+
+    footer {
+      margin-top: 2em;
+      font-size: 0.9em;
+      color: #666;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>¿Qué es NUnit?</h1>
+    <p>
+      <strong>NUnit</strong> es un framework de pruebas unitarias para .NET. Permite a los desarrolladores escribir y ejecutar pruebas automatizadas para verificar que su código funcione correctamente. Es uno de los frameworks más utilizados en el ecosistema .NET, similar a JUnit en Java.
+    </p>
+
+    <h2>Arquitectura de NUnit</h2>
+    <p>La arquitectura de NUnit se basa en los siguientes componentes clave:</p>
+    <ul>
+      <li><strong>Core (núcleo):</strong> Contiene las clases base necesarias para definir y ejecutar pruebas.</li>
+      <li><strong>Test Runner:</strong> Ejecuta las pruebas y muestra los resultados.</li>
+      <li><strong>Assertion Library:</strong> Proporciona métodos para verificar condiciones (<code>Assert.AreEqual()</code>, etc.).</li>
+      <li><strong>Attributes:</strong> Utiliza anotaciones como <code>[Test]</code>, <code>[SetUp]</code> para marcar métodos especiales.</li>
+      <li><strong>Extensibilidad:</strong> Permite crear extensiones personalizadas para adaptar los resultados, fixtures, etc.</li>
+    </ul>
+
+    <h2>Características Principales</h2>
+    <ul>
+      <li>Soporte para pruebas unitarias, de integración y de regresión.</li>
+      <li>Ejecuta pruebas en paralelo.</li>
+      <li>Compatibilidad con .NET Core y .NET Framework.</li>
+      <li>Compatible con runners como Visual Studio Test Explorer o línea de comandos.</li>
+    </ul>
+
+    <h2>Ejemplo Básico</h2>
+    <p>A continuación, un ejemplo básico de prueba con NUnit:</p>
+    <pre><code>using NUnit.Framework;
+
+namespace Calculadora.Tests
+{
+    public class CalculadoraTests
+    {
+        [SetUp]
+        public void Setup()
+        {
+            // Código que se ejecuta antes de cada prueba
+        }
+
+        [Test]
+        public void Sumar_DosNumeros_RetornaResultadoCorrecto()
+        {
+            int resultado = 2 + 3;
+            Assert.AreEqual(5, resultado);
+        }
+    }
+}</code></pre>
+
+    <h2>Atributos Comunes</h2>
+    <ul>
+      <li><code>[Test]</code>: Marca un método como prueba.</li>
+      <li><code>[SetUp]</code>: Se ejecuta antes de cada prueba.</li>
+      <li><code>[TearDown]</code>: Se ejecuta después de cada prueba.</li>
+      <li><code>[TestCase]</code>: Permite pruebas parametrizadas.</li>
+      <li><code>[Ignore]</code>: Ignora una prueba específica.</li>
+    </ul>
+
+    <h2>Ejemplo con Parámetros</h2>
+    <pre><code>[TestCase(2, 3, 5)]
+[TestCase(-1, -1, -2)]
+public void Sumar_Parametros_RetornaResultadoCorrecto(int a, int b, int esperado)
+{
+    Assert.AreEqual(esperado, a + b);
+}</code></pre>
+
+    <footer>
+      Desarrollado por Aura Cristina Garzon Rodriguez| Estilo personalizado para una presentación elegante de NUnit
+    </footer>
+  </div>
+</body>
+</html>
