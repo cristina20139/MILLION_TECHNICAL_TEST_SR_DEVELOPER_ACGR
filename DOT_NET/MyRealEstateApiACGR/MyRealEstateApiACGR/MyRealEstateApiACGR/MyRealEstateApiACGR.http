@@ -1,0 +1,6 @@
+@MyRealEstateApiACGR_HostAddress = http://localhost:5125
+
+GET {{MyRealEstateApiACGR_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
