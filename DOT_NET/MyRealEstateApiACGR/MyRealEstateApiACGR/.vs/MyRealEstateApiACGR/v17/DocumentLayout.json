@@ -1,12 +1,88 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "K:\\MILLION_TECHNICAL_TEST_SR_DEVELOPER_ACGR\\DOT_NET\\MyRealEstateApiACGR\\MyRealEstateApiACGR\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{86C1EF08-94ED-4F29-84C3-A2EFE5237798}|MyRealEstateApiACGR\\MyRealEstateApiACGR.csproj|k:\\million_technical_test_sr_developer_acgr\\dot_net\\myrealestateapiacgr\\myrealestateapiacgr\\myrealestateapiacgr\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{86C1EF08-94ED-4F29-84C3-A2EFE5237798}|MyRealEstateApiACGR\\MyRealEstateApiACGR.csproj|solutionrelative:myrealestateapiacgr\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86C1EF08-94ED-4F29-84C3-A2EFE5237798}|MyRealEstateApiACGR\\MyRealEstateApiACGR.csproj|k:\\million_technical_test_sr_developer_acgr\\dot_net\\myrealestateapiacgr\\myrealestateapiacgr\\myrealestateapiacgr\\application\\services\\propertyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86C1EF08-94ED-4F29-84C3-A2EFE5237798}|MyRealEstateApiACGR\\MyRealEstateApiACGR.csproj|solutionrelative:myrealestateapiacgr\\application\\services\\propertyservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86C1EF08-94ED-4F29-84C3-A2EFE5237798}|MyRealEstateApiACGR\\MyRealEstateApiACGR.csproj|k:\\million_technical_test_sr_developer_acgr\\dot_net\\myrealestateapiacgr\\myrealestateapiacgr\\myrealestateapiacgr\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86C1EF08-94ED-4F29-84C3-A2EFE5237798}|MyRealEstateApiACGR\\MyRealEstateApiACGR.csproj|solutionrelative:myrealestateapiacgr\\api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86C1EF08-94ED-4F29-84C3-A2EFE5237798}|MyRealEstateApiACGR\\MyRealEstateApiACGR.csproj|k:\\million_technical_test_sr_developer_acgr\\dot_net\\myrealestateapiacgr\\myrealestateapiacgr\\myrealestateapiacgr\\api\\controllers\\propertiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86C1EF08-94ED-4F29-84C3-A2EFE5237798}|MyRealEstateApiACGR\\MyRealEstateApiACGR.csproj|solutionrelative:myrealestateapiacgr\\api\\controllers\\propertiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PropertyService.cs",
+              "DocumentMoniker": "K:\\MILLION_TECHNICAL_TEST_SR_DEVELOPER_ACGR\\DOT_NET\\MyRealEstateApiACGR\\MyRealEstateApiACGR\\MyRealEstateApiACGR\\Application\\Services\\PropertyService.cs",
+              "RelativeDocumentMoniker": "MyRealEstateApiACGR\\Application\\Services\\PropertyService.cs",
+              "ToolTip": "K:\\MILLION_TECHNICAL_TEST_SR_DEVELOPER_ACGR\\DOT_NET\\MyRealEstateApiACGR\\MyRealEstateApiACGR\\MyRealEstateApiACGR\\Application\\Services\\PropertyService.cs",
+              "RelativeToolTip": "MyRealEstateApiACGR\\Application\\Services\\PropertyService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAcAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T12:52:43.04Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "K:\\MILLION_TECHNICAL_TEST_SR_DEVELOPER_ACGR\\DOT_NET\\MyRealEstateApiACGR\\MyRealEstateApiACGR\\MyRealEstateApiACGR\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "MyRealEstateApiACGR\\Properties\\launchSettings.json",
+              "ToolTip": "K:\\MILLION_TECHNICAL_TEST_SR_DEVELOPER_ACGR\\DOT_NET\\MyRealEstateApiACGR\\MyRealEstateApiACGR\\MyRealEstateApiACGR\\Properties\\launchSettings.json",
+              "RelativeToolTip": "MyRealEstateApiACGR\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-20T12:41:37.91Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PropertiesController.cs",
+              "DocumentMoniker": "K:\\MILLION_TECHNICAL_TEST_SR_DEVELOPER_ACGR\\DOT_NET\\MyRealEstateApiACGR\\MyRealEstateApiACGR\\MyRealEstateApiACGR\\API\\Controllers\\PropertiesController.cs",
+              "RelativeDocumentMoniker": "MyRealEstateApiACGR\\API\\Controllers\\PropertiesController.cs",
+              "ToolTip": "K:\\MILLION_TECHNICAL_TEST_SR_DEVELOPER_ACGR\\DOT_NET\\MyRealEstateApiACGR\\MyRealEstateApiACGR\\MyRealEstateApiACGR\\API\\Controllers\\PropertiesController.cs",
+              "RelativeToolTip": "MyRealEstateApiACGR\\API\\Controllers\\PropertiesController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC0AAABLAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-20T12:37:14.181Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "K:\\MILLION_TECHNICAL_TEST_SR_DEVELOPER_ACGR\\DOT_NET\\MyRealEstateApiACGR\\MyRealEstateApiACGR\\MyRealEstateApiACGR\\API\\Program.cs",
+              "RelativeDocumentMoniker": "MyRealEstateApiACGR\\API\\Program.cs",
+              "ToolTip": "K:\\MILLION_TECHNICAL_TEST_SR_DEVELOPER_ACGR\\DOT_NET\\MyRealEstateApiACGR\\MyRealEstateApiACGR\\MyRealEstateApiACGR\\API\\Program.cs",
+              "RelativeToolTip": "MyRealEstateApiACGR\\API\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEMAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-19T13:28:13.343Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MyRealEstateApiACGR")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8396177e6cffe7a1231ddcdfb195ece14fd3fb9d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2b6fa0dfa863530dd332a0ee2291add01fc44c34")]
 [assembly: System.Reflection.AssemblyProductAttribute("MyRealEstateApiACGR")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MyRealEstateApiACGR")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
